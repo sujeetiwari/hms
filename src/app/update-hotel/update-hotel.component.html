@@ -1,0 +1,61 @@
+<br>
+<br>
+<br>
+<div class="col-md-6 offset-md-3" style="padding-top: 30px;">
+    <div class="card card-container">
+        <h3 class="text-center" style="padding-top: 10px;">Update Hotel Details</h3>
+        <div class="container" style="max-width: 70%; margin-bottom: 30px;">
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label >Hotel Name :</label>
+             <input type="text" name="hotelName"  class="form-control" [(ngModel)]="hotel.hotelName">
+                </div>
+                <div *ngIf="f['hotelName'].touched && f['hotelName'].invalid"
+                 class="alert alter-danger">
+                  <div *ngIf="f['hotelName'].errors && f['hotelName'].errors['required']">
+                    Hotel  Name is required**
+                  </div>
+                  <div *ngIf="f['hotelName'].errors && f['hotelName'].errors['minlength']">
+                      Min. 3 characters required**
+                  </div>
+                  <div *ngIf="f['hotelName'].errors && f['hotelName'].errors['maxlength']">
+                      Max. 20 characters allowed**
+                  </div>
+              </div>
+
+
+                <div class="form-group">
+           <label >Location :</label>
+            <input type="text" name="hotelLocation"  class="form-control" [(ngModel)]="hotel.location">
+                  </div>
+                  <div *ngIf="f['location'].touched && f['location'].invalid" class="alert alter-danger">
+                    <div *ngIf="f['location'].errors && f['location'].errors['required']">
+                      Location is required**
+                    </div>
+                    <div *ngIf="f['location'].errors && f['location'].errors['location']">
+                        Min. 3 characters required**
+                    </div>
+                    <div *ngIf="f['location'].errors && f['location'].errors['location']">
+                        Max. 20 characters allowed**
+                    </div>
+                </div>
+
+
+                    <div class="form-group">
+                      <label >Rating :</label>
+              <input type="number" name="hotelRating"  class="form-control" [(ngModel)]="hotel.rating">
+                    </div>
+                    <div *ngIf="f['rating'].touched && f['rating'].invalid" class="alert alter-danger">
+                      <div *ngIf="f['rating'].errors && f['rating'].errors['required']">
+                          Rating is required**
+                      </div>
+                  </div>
+                    <br>
+                    <!-- <button [disabled]="form.invalid" class="btn btn-success" type="submit">Submit</button> -->
+
+                   <button class="btn btn-success" type="submit">Submit</button>
+              </form>
+          </div>
+          </div>
+          </div>
+     

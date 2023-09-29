@@ -1,0 +1,32 @@
+<br>
+<br>
+<br>
+<br>
+
+<div class="col-md-3 offset-md-3" ></div>
+<div class="conatiner" >
+    <h3 class="h3">Hotel List</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Hotel Id</th>
+                <th> Hotel Name</th>
+                <th>Location</th>
+                <th>Rating</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let hotel of hotels">
+                <td>{{hotel.id}}</td>
+                <td>{{hotel.hotelName}}</td>
+                <td>{{hotel.location}}</td>
+                <td>{{hotel.rating}}</td>
+                <td><button class="btn btn-primary" (click)="updateHotel(hotel.id)">Edit</button></td>
+                <td><button class="btn btn-secondary"  (click)="hotelDetails(hotel.id)">View</button></td>
+                <td><button class="btn btn-danger" (click)="deleteHotel(hotel.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

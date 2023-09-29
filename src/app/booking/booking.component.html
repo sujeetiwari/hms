@@ -1,0 +1,33 @@
+<br>
+<br>
+<br>
+<br>
+
+<div class="col-md-3 offset-md-3" ></div>
+<div class="conatiner" >
+    <h3 class="h3"> Booking</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Booking Id</th>
+                <th> Check In Date</th>
+                <th>Check Out Date </th>
+                <th>RoomType</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let booking of bookings">
+                <td>{{booking.bookingId}}</td>
+                <td>{{booking.checkInDate}}</td>
+                <td>{{booking.checkOutDate}}</td>
+                <td>{{booking.roomType}}</td>
+                <td>{{booking.price}}</td>
+                <td><button class="btn btn-primary" >Edit</button></td>
+                <td><button class="btn btn-secondary"  >View</button></td>
+                <td><button class="btn btn-danger" >Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
